@@ -32,6 +32,11 @@ font-family: 'Source Sans Pro', sans-serif; -->
     href="/styles/header.css"
     type="text/css">
 
+  <!-- Tweet Form CSS -->
+  <link rel="stylesheet"
+    href="/styles/new-tweet.css"
+    type="text/css">
+
 
   <!-- Font Awesome - For chevron -->
   <script
@@ -75,20 +80,23 @@ font-family: 'Source Sans Pro', sans-serif; -->
 
   <!-- Page-specific (main) content here -->
   <main class="container">
-    <p>Lorem ipsum dolor sit, amet
-      consectetur adipisicing elit. Unde
-      vel autem veniam quas dolorum hic
-      reprehenderit ex. Expedita ad
-      adipisci quos inventore tempore,
-      et rem officia, sit alias quia
-      animi eaque, fugit voluptatem.
-      Pariatur amet, beatae consectetur
-      blanditiis est voluptatum cumque
-      quae provident, sit similique ea
-      perferendis distinctio. Sint quia
-      tempore esse quidem obcaecati
-      quisquam veniam dolores eius aut
-      voluptatum?</p>
+    <section class="new-tweet">
+      <h2>Compose Tweet</h2>
+      <form action="/tweets/"
+        method="POST">
+        <label for="tweet-text">What are
+          you humming about?</label>
+        <textarea name="text"
+          id="tweet-text"></textarea>
+        <div>
+          <button type="submit"
+            class='btn'>Tweet</button>
+          <output name="counter"
+            class="counter"
+            for="tweet-text">140</output>
+        </div>
+      </form>
+    </section>
   </main>
 </body>
 

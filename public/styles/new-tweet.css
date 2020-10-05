@@ -1,0 +1,59 @@
+.container {
+  padding: 10px;
+  margin: 0 auto;
+}
+
+section {
+margin-top: 10px;
+}
+
+form {
+margin: 10px 0;
+width: 100%;
+display: flex;
+flex-direction: column;
+
+
+}
+
+textarea {
+  background: #f4f1ec;
+  margin: 8px 2px;
+  height: 2em;
+  border: none;
+  outline:none;
+  resize: none;
+  border-bottom: 0.2em solid #545149;
+  font-size: 0.8em;
+}
+
+textarea:hover {
+  cursor: pointer;
+}
+
+
+
+.btn {
+  
+  padding:5px;
+  margin: 3px 0;
+  background: #4056A1;
+  color: #FFFFFF;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.container div {
+  font-family: 'Bungee', sans-serif;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8em;
+ 
+}
+
+
+
