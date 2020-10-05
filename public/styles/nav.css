@@ -25,6 +25,7 @@ align-items: center;
 #navbar span {
   display: flex;
   font-family: 'Bungee', sans-serif;
+  align-items: center;
   
 }
 
@@ -41,9 +42,11 @@ align-items: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 
 }
 
 #navbar .nav-menu i{
   color:red;
+  margin: 3px;
 }
