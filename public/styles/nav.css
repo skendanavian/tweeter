@@ -1,5 +1,4 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -24,29 +23,25 @@ align-items: center;
 
 #navbar span {
   display: flex;
-  font-family: 'Bungee', sans-serif;
-  align-items: center;
-  
+  font-family: 'Bungee', sans-serif; 
 }
 
 #navbar{
   font-family: 'Source Sans Pro', sans-serif;
-  
   margin: 0;
 }
-
-
 
 #navbar .nav-menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+ 
   
 
 }
 
-#navbar .nav-menu i{
+#navbar .nav-menu i {
   color:red;
   margin: 3px;
 }
