@@ -53,5 +53,13 @@ textarea:hover {
   font-size: 0.8em;
 }
 
+.positive {
+  color: #FFFFFF;
+}
+
+.negative {
+  color:red;
+}
+
 
 
