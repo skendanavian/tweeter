@@ -45,15 +45,17 @@ article.tweet footer {
 
 article.tweet a {
   color: #4056A1;
+  font-weight: 300;
   text-decoration: none;
   padding: 0 10px;
+  opacity: 90%;
   
 }
 
 /* Hover States */
 
 article.tweet:hover {
-  box-shadow: 7px 7px #4056A1;
+  box-shadow: 7px 7px #4056A1;;
   font-weight: 400;
   opacity: 100%;
   
@@ -74,6 +76,12 @@ article.tweet:hover footer {
   }
 
 article.tweet:hover main {
+  
+  font-weight: 400;
+  opacity: 100%;
+  
+  }
+article.tweet:hover a {
   
   font-weight: 400;
   opacity: 100%;
