@@ -17,4 +17,4 @@ $(document).ready(function() {
 
 });
 
-// charCount($(this).val().length)
+

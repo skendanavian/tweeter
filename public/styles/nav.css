@@ -4,7 +4,6 @@
 }
 
 #navbar {
-
 height: 120px;
 width: 100%;
 background: #4056A1;
@@ -12,11 +11,7 @@ color: #FFFFFF;
 padding: 1.5em;
 position: fixed;
 top:0;
-
-
-
-
-
+z-index: 9999;
 }
 
 #navbar .nav-container {

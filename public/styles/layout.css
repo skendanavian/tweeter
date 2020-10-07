@@ -21,6 +21,14 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  
+}
+
+/* fix header from being clipped by fixed navbar. found on stack overflow */
+body::before {
+  display:block;
+  content: '';
+  height:120px; 
 }
 
 

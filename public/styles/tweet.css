@@ -1,4 +1,5 @@
 article.tweet {
+  font-family: 'Source Sans Pro', sans-serif;
   color: #545149;
   border: 0.15em solid  #545149 ;
   margin: 2em auto;
@@ -31,6 +32,13 @@ article.tweet header {
 article.tweet header .user-id {
   text-decoration: none;
   visibility: hidden;
+  align-self: center;
+  }
+article.tweet header p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.5rem;
+  padding: 0 10px;
+  
   }
 
 article.tweet footer {
