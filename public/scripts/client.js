@@ -24,6 +24,12 @@ $(document).ready(() => {
 
   }
 
+  const escape = function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
   const createTweetElement = (tweetData) => {
     const daysAgo = calculateDays(tweetData.created_at)
     const $tweet = $(
@@ -35,7 +41,7 @@ $(document).ready(() => {
       </header >
 
       <main>
-        <p>${tweetData.content.text}</p>
+        <p>${escape(tweetData.content.text)}</p>
       </main>
       <footer>
         <p>Posted ${daysAgo} days ago</p>
@@ -89,7 +95,7 @@ $(document).ready(() => {
 
     } else {
 
-      const tweetMessage = $(this).serialize();
+      const tweetMessage = $(this).serialize()
       $.post('/tweets', tweetMessage).then(() => {
 
         $('.tweets-container').empty();
