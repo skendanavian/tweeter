@@ -42,13 +42,18 @@ $(document).ready(() => {
 
   };
 
+  const calculateDays = (timestamp) => {
+    const dateCreated = new Date(timestamp);
+    const todaysDate = new Date();
+    const daysAgo = Math.round((todaysDate - dateCreated) / 1000 / 60 / 60 / 24);;
+    return daysAgo;
+
+  }
+
 
 
   const createTweetElement = (tweetData) => {
-    const timeStampMilliseconds = tweetData.created_at * 1000;
-    const dateCreated = new Date(timeStampMilliseconds);
-    const todaysDate = new Date();
-    const daysAgo = (todaysDate - dateCreated).toLocaleString(("en-US", {day: "numeric"}));
+    const daysAgo = calculateDays(tweetData.created_at)
     const $tweet = $(
       `</article>
     <article class="tweet">
@@ -61,7 +66,7 @@ $(document).ready(() => {
         <p>${tweetData.content.text}</p>
       </main>
       <footer>
-        <p>${daysAgo} days ago</p>
+        <p>Posted ${daysAgo} days ago</p>
         <div>
           <a href=""> <i
               class="fas fa-flag"></i>
