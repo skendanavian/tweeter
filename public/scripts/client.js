@@ -86,6 +86,18 @@ $(document).ready(() => {
 
   renderTweets(data);
 
+  $('#create-tweet').submit(function(event) {
+    event.preventDefault();
+    const tweetMessage = $(this).serialize();
+
+
+    $.post('/tweets', tweetMessage).then(() => {
+      console.log('got here')
+      tweetMessage;
+    })
+
+  })
+
 })
 
 
