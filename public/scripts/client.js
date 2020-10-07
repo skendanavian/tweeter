@@ -7,32 +7,7 @@
 
 $(document).ready(() => {
 
-
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
+  // $('#new-tweet-btn').click(() =>)
 
   const renderTweets = (tweetData) => {
     for (let tweet of tweetData) {
@@ -49,8 +24,6 @@ $(document).ready(() => {
     return daysAgo;
 
   }
-
-
 
   const createTweetElement = (tweetData) => {
     const daysAgo = calculateDays(tweetData.created_at)
@@ -84,17 +57,41 @@ $(document).ready(() => {
 
   }
 
-  renderTweets(data);
+
+
+  const loadTweets = () => {
+    $.get('/tweets')
+      .then((tweets) => {
+        renderTweets(tweets);
+      })
+      .catch(err => console.log(err))
+  }
+
+  loadTweets()
+
 
   $('#create-tweet').submit(function(event) {
     event.preventDefault();
-    const tweetMessage = $(this).serialize();
+    const charCount = $('#create-tweet').children('div').children('.counter').val();
+    const textField = $('#tweet-text').val();
 
+    if (charCount < 0) {
+      alert("This birdie has alot to say! Try again but keep those chirps under 140 characters.");
 
-    $.post('/tweets', tweetMessage).then(() => {
-      console.log('got here')
-      tweetMessage;
-    })
+    } else if (textField === '' || textField === null) {
+      alert("Sorry, your tweet appears to be empty! Chirp something and try again.");
+
+    } else {
+
+      console.log(charCount)
+      console.log(textField)
+      const tweetMessage = $(this).serialize();
+      $.post('/tweets', tweetMessage).then(() => {
+        console.log('got here')
+        tweetMessage;
+      })
+        .catch(err => console.log(err))
+    }
 
   })
 
