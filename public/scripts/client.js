@@ -7,7 +7,6 @@
 
 $(document).ready(() => {
 
-  // $('#new-tweet-btn').click(() =>)
 
   const renderTweets = (tweetData) => {
     for (let tweet of tweetData) {
@@ -58,19 +57,26 @@ $(document).ready(() => {
   }
 
 
-
   const loadTweets = () => {
+    $.ajaxSetup({
+      cache: false
+    });
+
     $.get('/tweets')
       .then((tweets) => {
-        renderTweets(tweets);
+        renderTweets(tweets.reverse());
       })
       .catch(err => console.log(err))
   }
 
-  loadTweets()
+
+
 
 
   $('#create-tweet').submit(function(event) {
+    $.ajaxSetup({
+      cache: false
+    });
     event.preventDefault();
     const charCount = $('#create-tweet').children('div').children('.counter').val();
     const textField = $('#tweet-text').val();
@@ -83,17 +89,19 @@ $(document).ready(() => {
 
     } else {
 
-      console.log(charCount)
-      console.log(textField)
       const tweetMessage = $(this).serialize();
       $.post('/tweets', tweetMessage).then(() => {
-        console.log('got here')
-        tweetMessage;
+
+        $('.tweets-container').empty();
+        loadTweets();
+
       })
         .catch(err => console.log(err))
     }
 
   })
+
+  loadTweets();
 
 })
 
@@ -113,5 +121,4 @@ $(document).ready(() => {
 
 
 
-// })
 
