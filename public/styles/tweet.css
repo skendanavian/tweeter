@@ -58,6 +58,10 @@ article.tweet a {
   opacity: 90%;
 }
 
+article.tweet i {
+  visibility: hidden;
+}
+
 /* Hover States */
 
 article.tweet:hover {
@@ -90,4 +94,8 @@ article.tweet:hover .user-id {
   color: #4056a1;
   opacity: 80%;
   cursor: pointer;
+}
+
+article.tweet:hover i {
+  visibility: visible;
 }
