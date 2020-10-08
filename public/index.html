@@ -81,6 +81,7 @@ font-family: 'Source Sans Pro', sans-serif; -->
     </div>
   </nav>
 
+
   <header class="header">
     <div>
       <img
@@ -92,16 +93,19 @@ font-family: 'Source Sans Pro', sans-serif; -->
     </div>
   </header>
 
-  <!-- Page-specific (main) content here -->
+  <!-- Create New Tweet and Error Messages -->
   <main class="container">
     <section class="new-tweet">
-      <h2>Compose Tweet</h2>
+      <!-- <p class="input-error"></p> -->
+
       <form id="create-tweet"
         action="/tweets/" method="POST">
+        <p class="input-error"></p>
         <label for="tweet-text">What are
           you humming about?</label>
         <textarea name="text"
           id="tweet-text"></textarea>
+
         <div>
           <button type="submit"
             id="new-tweet-btn"
@@ -113,9 +117,11 @@ font-family: 'Source Sans Pro', sans-serif; -->
       </form>
     </section>
 
-    <section class="tweets-container">
 
+    <section class="tweets-container">
+      <!-- Tweets are placed in this container via javaScript/database -->
     </section>
+
   </main>
 </body>
 <script type="text/javascript"

@@ -80,19 +80,26 @@ $(document).ready(() => {
 
 
   $('#create-tweet').submit(function(event) {
+
+    //reset slidedown error message if active
+    if ($('.input-error').is(":visible")) {
+      console.log('visible')
+      $('.input-error').slideUp(200);
+    }
+
     $.ajaxSetup({
       cache: false
     });
     event.preventDefault();
+
     const charCount = $('#create-tweet').children('div').children('.counter').val();
     const textField = $('#tweet-text').val();
 
     if (charCount < 0) {
-      alert("This birdie has alot to say! Try again but keep those chirps under 140 characters.");
+      setTimeout(() => {$('.input-error').text('⚠️ Tweet exceeds the max of 140 characters. ⚠️').slideDown()}, 100)
 
     } else if (textField === '' || textField === null) {
-      alert("Sorry, your tweet appears to be empty! Chirp something and try again.");
-
+      setTimeout(() => {$('.input-error').slideDown().text('⚠️ The textbox is empty. Please write a tweet below. ⚠️')}, 100)
     } else {
 
       const tweetMessage = $(this).serialize()
