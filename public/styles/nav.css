@@ -24,6 +24,7 @@ align-items: center;
 }
 
 #navbar span {
+  
   display: flex;
   font-family: 'Bungee', sans-serif; 
 }
@@ -34,16 +35,41 @@ align-items: center;
 }
 
 #navbar .nav-menu {
+ 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
  
+}
+
+.nav-menu i {
+  color: red;
+  animation: bounce 2.5s 1s ease-in-out infinite;
+  margin:5px 5px;
   
-
 }
 
-#navbar .nav-menu i {
-  color:red;
-  margin: 3px;
+@keyframes bounce {
+ 0% {
+    transform: translateY(-15%);
+  }
+  50% {
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(-15%);
+  }
 }
+
+.nav-menu:hover{
+  cursor: pointer;
+}
+
+  .nav-menu:hover i {
+ cursor: pointer;
+ color:rgb(191, 21, 21);
+ opacity: 90%;
+  }
+
+

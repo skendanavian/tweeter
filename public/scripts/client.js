@@ -116,7 +116,15 @@ $(document).ready(() => {
 
   loadTweets();
 
+
+  $('.nav-menu').click(() => {
+    $('#create-tweet').slideToggle()
+    $("#create-tweet textarea").focus();
+  })
+
 })
+
+// $('.nav-menu').slideDown()
 
 
 
