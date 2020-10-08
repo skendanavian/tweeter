@@ -1,6 +1,5 @@
-.header{
-
- position:initial ;
+.header {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,10 +8,37 @@
   width: 100vw;
   background-color: #fac832;
   background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
+@media only screen and (min-width: 1024px) {
+  .desktop-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
+    height: 100vh;
+  }
 
+  .header {
+    margin: 2em 4em 3em 3em;
+    height: 350px;
+    width: 350px;
+  }
 
+  .container {
+    flex-grow: 6;
+    width: 65vw;
+    margin-right: 3em;
+  }
+}
 
+@media only screen and (max-width: 1023px) {
+  #navbar {
+    background-color: #fac832;
+    background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
+    position: relative;
+  }
+  body::before {
+    height: 0px;
+  }
+}

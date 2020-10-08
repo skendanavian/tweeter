@@ -1,26 +1,26 @@
 article.tweet {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   color: #545149;
-  border: 0.15em solid  #545149 ;
+  border: 0.15em solid #545149;
   margin: 2em auto;
-  display:flex;
+  display: flex;
   font-weight: 300;
   flex-direction: column;
   justify-content: center;
   align-content: center;
   opacity: 98%;
 }
-  
+
 article.tweet main {
-  display:flex;
+  display: flex;
   align-content: center;
   font-size: 0.8em;
   font-weight: 300;
   width: 95%;
   margin: 0.2em auto;
   padding: 0.5em 1em 1.5em 1em;
-  border-bottom: 0.15em solid  #545149 ;
-  }
+  border-bottom: 0.15em solid #545149;
+}
 
 article.tweet header {
   display: flex;
@@ -33,13 +33,12 @@ article.tweet header .user-id {
   text-decoration: none;
   visibility: hidden;
   align-self: center;
-  }
+}
 article.tweet header p {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 1.5rem;
   padding: 0 10px;
-  
-  }
+}
 
 article.tweet footer {
   font-size: 0.6em;
@@ -52,54 +51,43 @@ article.tweet footer {
 }
 
 article.tweet a {
-  color: #4056A1;
+  color: #4056a1;
   font-weight: 300;
   text-decoration: none;
   padding: 0 10px;
   opacity: 90%;
-  
 }
 
 /* Hover States */
 
 article.tweet:hover {
-  box-shadow: 7px 7px #4056A1;;
+  box-shadow: 7px 7px #4056a1;
   font-weight: 400;
   opacity: 100%;
-  
-  }
+}
 
 article.tweet:hover footer {
-  
   font-weight: 400;
   opacity: 100%;
-  
-  }
-  
+}
+
 article.tweet:hover footer {
-  
   font-weight: 400;
   opacity: 100%;
-  
-  }
+}
 
 article.tweet:hover main {
-  
   font-weight: 400;
   opacity: 100%;
-  
-  }
+}
 article.tweet:hover a {
-  
   font-weight: 400;
   opacity: 100%;
-  
-  }
-  
+}
+
 article.tweet:hover .user-id {
   visibility: visible;
-  color: #4056A1;
-  opacity:80%;
+  color: #4056a1;
+  opacity: 80%;
   cursor: pointer;
-    
-    }
+}

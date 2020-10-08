@@ -9,8 +9,7 @@ main {
 }
 
 .new-tweet {
-  margin: 20px 0;
-
+  margin: 30px 0;
 }
 
 form {
@@ -25,14 +24,13 @@ textarea {
   background: #f4f1ec;
   font-weight: 300;
   margin: 10px 0;
-  padding:25px 0;
+  padding: 25px 0;
   height: 1em;
   border: none;
-  outline:none;
+  outline: none;
   resize: none;
   border-bottom: 0.2em solid #545149;
   font-size: 0.8em;
-
 }
 
 textarea:hover {
@@ -40,10 +38,10 @@ textarea:hover {
 }
 
 .btn {
-  padding:5px;
+  padding: 5px;
   margin: 3px 0;
-  background: #4056A1;
-  color: #FFFFFF;
+  background: #4056a1;
+  color: #ffffff;
 }
 
 .btn:hover {
@@ -51,7 +49,7 @@ textarea:hover {
 }
 
 .container div {
-  font-family: 'Bungee', sans-serif;
+  font-family: "Bungee", sans-serif;
   margin: 10px 0;
   display: flex;
   justify-content: space-between;
@@ -61,24 +59,19 @@ textarea:hover {
 
 .input-error {
   display: none;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 0.7em;
   color: rgb(207, 79, 79);
   /* border: 2px solid  #4056A1; */
   padding: 5px;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
   text-align: center;
 }
 
-
 .positive {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .negative {
-  color:red;
+  color: red;
 }
-
-
-
-
