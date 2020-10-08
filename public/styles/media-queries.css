@@ -11,6 +11,7 @@
     margin: 2.5em 4em 3em 3em;
     height: 350px;
     width: 400px;
+    border-radius: 20%;
   }
 
   .header img {
