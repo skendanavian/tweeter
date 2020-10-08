@@ -19,7 +19,7 @@
   flex-direction: row;
   align-content: center;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 #navbar span {
@@ -37,11 +37,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: 0.5s ease;
 }
 
 .nav-menu i {
   color: red;
-  animation: bounce 2.5s 1s ease-in-out infinite;
+  animation: bounce 2s ease infinite;
   margin: 5px 5px;
 }
 

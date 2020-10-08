@@ -1,13 +1,9 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
 html {
   box-sizing: border-box;
-
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -17,29 +13,50 @@ html {
 
 body {
   width: 100vw;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  
 }
 
-/* fix header from being clipped by fixed navbar. found on stack overflow */
+/* fix header from being clipped by fixed navbar in Desktop design. (Stack Overflow)*/
 body::before {
-  display:block;
-  content: '';
-  height:120px; 
+  display: block;
+  content: "";
+  height: 120px;
 }
 
+main {
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 1.5em;
+  background-color: #f4f1ec;
+}
 
+/* Button to get back to navbar on scroll */
+.back-to-top {
+  visibility: hidden;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  color: #ffffff;
+  background-color: red;
+  padding: 20px;
+  border-radius: 50%;
+  font-size: 20px;
+}
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+.show {
+  visibility: visible;
+}
 
- main{
-   width: 90vw;
-   margin: 0 auto;
-   margin-top: 1.5em;
-   background-color: #f4f1ec;
- }
+.hide {
+  visibility: hidden;
+}
+
+.back-to-top:hover {
+  cursor: pointer;
+  background-color: rgb(210, 82, 82);
+}

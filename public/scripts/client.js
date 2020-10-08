@@ -1,3 +1,5 @@
+//Script for Get and Post Ajax Requests.  Populate and Render Tweets from DB.
+
 $(document).ready(() => {
   const renderTweets = (tweetData) => {
     for (let tweet of tweetData) {
@@ -22,6 +24,7 @@ $(document).ready(() => {
     return div.innerHTML;
   };
 
+  //Creates the HTML for each tweet
   const createTweetElement = (tweetData) => {
     const daysAgo = calculateDays(tweetData.created_at);
     const $tweet = $(
@@ -70,13 +73,13 @@ $(document).ready(() => {
   $("#create-tweet").submit(function (event) {
     //reset slidedown error message if active
     if ($(".input-error").is(":visible")) {
-      console.log("visible");
       $(".input-error").slideUp(200);
     }
 
     $.ajaxSetup({
       cache: false,
     });
+
     event.preventDefault();
 
     const charCount = $("#create-tweet")
@@ -98,7 +101,7 @@ $(document).ready(() => {
           .slideDown()
           .text("⚠️ The textbox is empty. Please write a tweet below. ⚠️");
       }, 100);
-      //Submit Tweet for rendering.
+      //Submit Tweet for rendering if it passes validation.
     } else {
       const tweetMessage = $(this).serialize();
       $.post("/tweets", tweetMessage)
@@ -112,12 +115,12 @@ $(document).ready(() => {
     }
   });
 
+  //Gets tweets from DB on initial page load
   loadTweets();
 
+  //Nav Button Slider
   $(".nav-menu").click(() => {
     $("#create-tweet").slideToggle();
     $("#create-tweet textarea").focus();
   });
 });
-
-// $('.nav-menu').slideDown()
