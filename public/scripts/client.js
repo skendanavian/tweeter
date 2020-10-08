@@ -86,7 +86,9 @@ $(document).ready(() => {
       .children("div")
       .children(".counter")
       .val();
-    const textField = $("#tweet-text").val();
+
+    //trim whitespace to fix bug on form validator
+    const textField = $.trim($("#tweet-text").val());
 
     //Error Handling for empty text/over 140 chars.
     if (charCount < 0) {
