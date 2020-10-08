@@ -39,6 +39,11 @@
   align-items: center;
 }
 
+.nav-title:hover {
+  cursor: pointer;
+  opacity: 93%;
+}
+
 .nav-menu i {
   color: red;
   animation: bounce 2s ease infinite;

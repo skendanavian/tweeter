@@ -125,4 +125,9 @@ $(document).ready(() => {
     $("#create-tweet").slideToggle();
     $("#create-tweet textarea").focus();
   });
+
+  //Click on Tweeter Logo to go back to top
+  $(".nav-title").click(() => {
+    $(".back-to-top").trigger("click");
+  });
 });
