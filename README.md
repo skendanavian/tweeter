@@ -2,7 +2,7 @@
 
 This is a single page Twitter clone project which showcases some nice front end features using HTML, CSS,JavaScript, jQuery, and AJAX.
 
-The app features a responsive design that adapts for optimization for mobile, tablet and large screen devices.
+The app features a responsive design for optimization on mobile, tablet and large screen devices.
 
 I implemented all of the front-end features as part of my course requirements while studying at Lighthouse labs. The server side functionality for the app was however provided to me prior to the build.
 
@@ -20,9 +20,10 @@ I implemented all of the front-end features as part of my course requirements wh
 
 ## Final Product
 
-!["Mobile/Tablet Version"](https://github.com/skendanavian/tweeter/blob/master/docs/Tablet-Mobile%20Version.gif?raw=true)
-!["Desktop Version"](https://github.com/skendanavian/tweeter/blob/master/docs/DesktopVersion.gif?raw=true)
-!["Error Message Example"]()
+!["Mobile/Tablet- Screenshot"](https://github.com/skendanavian/tweeter/blob/master/docs/Mobile-CharCount.png?raw=true)
+!["Desktop - Screenshot"](https://github.com/skendanavian/tweeter/blob/master/docs/Desktop-Static.png?raw=true)
+!["Mobile/Tablet - GIF"](https://github.com/skendanavian/tweeter/blob/master/docs/Tablet-Mobile%20Version.gif?raw=true)
+!["Desktop - GIF"](https://github.com/skendanavian/tweeter/blob/master/docs/DesktopVersion.gif?raw=true)
 
 ## Dependencies
 
